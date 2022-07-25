@@ -28,9 +28,9 @@ public class SmsService {
 	@Autowired
 	private SaleRepository saleRepository;
 
-	public void sendSms(Long SaleId) {
+	public void sendSms(Long saleId) {
 		
-		Sale sale = saleRepository.findById(SaleId).get();
+		Sale sale = saleRepository.findById(saleId).get();
 		
 		String date = sale.getDate().getMonthValue() + "/" + sale.getDate().getYear();
 		
